@@ -4,8 +4,11 @@ DOS is my first Operating System build using TypeScript and [this 6502 instructi
 # Necessary Components?
 To get started with DOS we will need the following:
 
-1. Node! Install Node using either homebrew (mac) or this [link](https://nodejs.org/en/download)
-2. TypeScript! Simply run "npm install -g typescript" in a command window
+1. npm (Node)! Install npm either using homebrew (mac) or this [link](https://nodejs.org/en/download)
+2. TypeScript! Simply run "npm install -g typescript" in a terminal window
 
 # Building and Running DOS
 To build and run DOS follow the steps listed below:
+
+1. Run "tsc" in a terminal window
+2. Use the vscode ext. "Live server" to view the application or I have it hosted here...
