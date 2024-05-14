@@ -31,6 +31,18 @@ module TSOS {
                                   "- Displays the current version.");
             this.commandList[this.commandList.length] = sc;
 
+            // date
+            sc = new ShellCommand(this.shellDate,
+                                "date",
+                                "- Displays the current date and time.");
+            this.commandList[this.commandList.length] = sc;
+
+            // whereami
+            sc = new ShellCommand(this.shellWhereAmI,
+                                    "whereami",
+                                    "- Displays the users location.");
+            this.commandList[this.commandList.length] = sc;
+
             // help
             sc = new ShellCommand(this.shellHelp,
                                   "help",
@@ -205,6 +217,14 @@ module TSOS {
 
         public shellVer(args: string[]) {
             _StdOut.putText(APP_NAME + " version " + APP_VERSION);
+        }
+
+        public shellDate(args: string[]){
+
+        }
+
+        public shellWhereAmI(args: string[]){
+
         }
 
         public shellHelp(args: string[]) {

@@ -1,3 +1,5 @@
 -------------TDL-------------
+project 1
 
-- 
+- fill out 3 functions in shell commands
+- fix ver command
