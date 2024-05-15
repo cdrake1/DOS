@@ -43,6 +43,7 @@ module TSOS {
                                     "- Displays the users location.");
             this.commandList[this.commandList.length] = sc;
 
+            //cowsay
             sc = new ShellCommand(this.shellCowSay,
                                     "cowsay",
                                     "- Displays the a cow that says something random.");
