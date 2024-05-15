@@ -43,6 +43,11 @@ module TSOS {
                                     "- Displays the users location.");
             this.commandList[this.commandList.length] = sc;
 
+            sc = new ShellCommand(this.shellCowSay,
+                                    "cowsay",
+                                    "- Displays the a cow that says something random.");
+            this.commandList[this.commandList.length] = sc;
+
             // help
             sc = new ShellCommand(this.shellHelp,
                                   "help",
@@ -220,11 +225,24 @@ module TSOS {
         }
 
         public shellDate(args: string[]){
-
+            // Outputs the current data and time
+            let dateTime = new Date();
+            _StdOut.putText(dateTime);
         }
 
         public shellWhereAmI(args: string[]){
+            _StdOut.putText("I think you are in Tokyo Japan?");
+            _StdOut.putText("No that cant be right...")
+        }
 
+        public shellCowSay(args: string[]){
+            _StdOut.putText("< Hello! >")
+            _StdOut.putText("-------------")
+            _StdOut.putText("        \   ^__^");
+            _StdOut.putText("         \  (oo)\_______");
+            _StdOut.putText("            (__)\       )\\/\\");
+            _StdOut.putText("                ||----w |");
+            _StdOut.putText("                ||     ||");
         }
 
         public shellHelp(args: string[]) {
