@@ -180,12 +180,13 @@ var TSOS;
         }
         shellDate(args) {
             // Outputs the current data and time
-            let dateTime = new Date();
-            _StdOut.putText(dateTime);
+            let date = new Date().toLocaleDateString();
+            let time = new Date().toLocaleTimeString();
+            _StdOut.putText(date + " " + time);
         }
         shellWhereAmI(args) {
-            _StdOut.putText("I think you are in Tokyo Japan?");
-            _StdOut.putText("No that cant be right...");
+            _StdOut.putText("I think you are in Tokyo?");
+            _StdOut.putText(" No that cant be right...");
         }
         shellCowSay(args) {
             _StdOut.putText("< Hello! >");
