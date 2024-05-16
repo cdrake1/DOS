@@ -24,6 +24,15 @@ var TSOS;
             // ver
             sc = new TSOS.ShellCommand(this.shellVer, "ver", "- Displays the current version.");
             this.commandList[this.commandList.length] = sc;
+            // date
+            sc = new TSOS.ShellCommand(this.shellDate, "date", "- Displays the current date and time.");
+            this.commandList[this.commandList.length] = sc;
+            // whereami
+            sc = new TSOS.ShellCommand(this.shellWhereAmI, "whereami", "- Displays the users location.");
+            this.commandList[this.commandList.length] = sc;
+            //cowsay
+            sc = new TSOS.ShellCommand(this.shellCowSay, "cowsay", "- Displays the a cow that says something random.");
+            this.commandList[this.commandList.length] = sc;
             // help
             sc = new TSOS.ShellCommand(this.shellHelp, "help", "- This is the help command. Seek help.");
             this.commandList[this.commandList.length] = sc;
@@ -169,6 +178,24 @@ var TSOS;
         shellVer(args) {
             _StdOut.putText(APP_NAME + " version " + APP_VERSION);
         }
+        shellDate(args) {
+            // Outputs the current data and time
+            let dateTime = new Date();
+            _StdOut.putText(dateTime);
+        }
+        shellWhereAmI(args) {
+            _StdOut.putText("I think you are in Tokyo Japan?");
+            _StdOut.putText("No that cant be right...");
+        }
+        shellCowSay(args) {
+            _StdOut.putText("< Hello! >");
+            _StdOut.putText("-------------");
+            _StdOut.putText("        \   ^__^");
+            _StdOut.putText("         \  (oo)\_______");
+            _StdOut.putText("            (__)\       )\\/\\");
+            _StdOut.putText("                ||----w |");
+            _StdOut.putText("                ||     ||");
+        }
         shellHelp(args) {
             _StdOut.putText("Commands:");
             for (var i in _OsShell.commandList) {
@@ -190,8 +217,38 @@ var TSOS;
             if (args.length > 0) {
                 var topic = args[0];
                 switch (topic) {
+                    case "ver":
+                        _StdOut.putText("Ver displays the current version of the OS.");
+                        break;
+                    case "date":
+                        _StdOut.putText("Date displays the current date and time.");
+                        break;
+                    case "whereami":
+                        _StdOut.putText("Whereami displays the users current location.");
+                        break;
+                    case "cowsay":
+                        _StdOut.putText("Cowsay displays and nice looking cow selling hello.");
+                        break;
                     case "help":
                         _StdOut.putText("Help displays a list of (hopefully) valid commands.");
+                        break;
+                    case "shutdown":
+                        _StdOut.putText("Shutdown shuts down the virtual OS but leaves the host and hardware simulation running.");
+                        break;
+                    case "cls":
+                        _StdOut.putText("Cls clears the screen and resets the cursor pointer.");
+                        break;
+                    case "man":
+                        _StdOut.putText("Man displays the manual page for <topic>.");
+                        break;
+                    case "trace":
+                        _StdOut.putText("Trace turns the OS trace on and off.");
+                        break;
+                    case "rot13":
+                        _StdOut.putText("Rot13 performs rot13 obfuscation on a <string>.");
+                        break;
+                    case "prompt":
+                        _StdOut.putText("Prompt sets the prompt.");
                         break;
                     // TODO: Make descriptive MANual page entries for the the rest of the shell commands here.
                     default:

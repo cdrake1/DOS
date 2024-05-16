@@ -91,6 +91,14 @@ var TSOS;
             // be reloaded from the server. If it is false or not specified the browser may reload the
             // page from its cache, which is not what we want.
         }
+        static hostDisplayCurrentDateTime() {
+            // Displays the local date and time
+            document.getElementById("dateTime").innerHTML = new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString();
+        }
+        static hostDisplayStatus() {
+            // Displays the OS status
+            document.getElementById("status").innerHTML = status;
+        }
     }
     TSOS.Control = Control;
 })(TSOS || (TSOS = {}));
