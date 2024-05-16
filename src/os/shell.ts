@@ -227,8 +227,9 @@ module TSOS {
 
         public shellDate(args: string[]){
             // Outputs the current data and time
-            let dateTime = new Date();
-            _StdOut.putText(dateTime);
+            let date = new Date().toLocaleDateString();
+            let time  = new Date().toLocaleTimeString();
+            _StdOut.putText(date + " " + time);
         }
 
         public shellWhereAmI(args: string[]){
