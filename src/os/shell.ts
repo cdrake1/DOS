@@ -232,8 +232,8 @@ module TSOS {
         }
 
         public shellWhereAmI(args: string[]){
-            _StdOut.putText("I think you are in Tokyo Japan?");
-            _StdOut.putText("No that cant be right...")
+            _StdOut.putText("I think you are in Tokyo?");
+            _StdOut.putText(" No that cant be right...")
         }
 
         public shellCowSay(args: string[]){
