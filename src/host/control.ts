@@ -115,7 +115,7 @@ module TSOS {
 
         public static hostDisplayCurrentDateTime(): void{
             // Displays the local date and time
-            document.getElementById("dateTime").innerHTML = "Date: " + new Date().toLocaleDateString() + " Time: " + new Date().toLocaleTimeString();
+            document.getElementById("dateTime").innerHTML = " Date: " + new Date().toLocaleDateString() + " Time: " + new Date().toLocaleTimeString();
         }
 
         public static hostDisplayStatus(): void{

@@ -75,12 +75,23 @@ module TSOS {
              * Font size measures from the baseline to the highest point in the font.
              * Font descent measures from the baseline to the lowest point in the font.
              * Font height margin is extra spacing between the lines.
+             * Handle scrolling with Y
              */
-            this.currentYPosition += _DefaultFontSize + 
-                                     _DrawingContext.fontDescent(this.currentFont, this.currentFontSize) +
-                                     _FontHeightMargin;
+            var _FontHeight = _DefaultFontSize + 
+                            _DrawingContext.fontDescent(this.currentFont, this.currentFontSize) +
+                            _FontHeightMargin;
 
-            // TODO: Handle scrolling. (iProject 1)
+            //check if Y is outgrowing its allotted space
+            if(this.currentYPosition > _Canvas.height){
+                //capture an image of the prior text
+                var priorText = _DrawingContext.measureText(0, _FontHeight, _Canvas.width, _Canvas.height/*something goes here*/);
+                this.clearScreen(); //clear the screen
+                _DrawingContext.putImageData(priorText, 0, 0);  //paste the prior text image at the top
+            }
+            else{
+                //only increment Y if we have to
+                this.currentYPosition += _FontHeight
+            }
         }
     }
  }
