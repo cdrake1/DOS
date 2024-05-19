@@ -11,4 +11,4 @@ To get started with drakeOS we will need the following:
 To build and run drakeOS follow the steps listed below:
 
 1. Run "tsc" in a terminal window
-2. Use the vscode ext. "Live server" to view the application or I have it hosted here...
+2. Use the vscode ext. "Live server" to view the application or I have it hosted [here...](https://cdrake1.github.io/drakeOS/)
