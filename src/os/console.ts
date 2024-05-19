@@ -41,7 +41,24 @@ module TSOS {
                     _OsShell.handleInput(this.buffer);
                     // ... and reset our buffer.
                     this.buffer = "";
-                } else {
+                } 
+                else if(chr === "ctrl-c"){  //ctrl-c
+
+                }
+                else if(chr === "upArrow"){  //up arrow
+
+                }
+                else if(chr === "downArrow"){  //down arrow
+
+                }
+                else if(chr === String.fromCharCode()){ //tab
+                    
+                }
+                else if(String.fromCharCode()){ //backspace
+                    
+                }
+                
+                else {
                     // This is a "normal" character, so ...
                     // ... draw it on the screen...
                     this.putText(chr);

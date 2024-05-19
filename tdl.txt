@@ -1,5 +1,5 @@
 -------------TDL-------------
 project 1
 
-- work on scrolling
-- work on host changes
+--device driver keyboard special characters
+-- console handle input characters
