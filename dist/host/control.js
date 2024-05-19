@@ -93,11 +93,11 @@ var TSOS;
         }
         static hostDisplayCurrentDateTime() {
             // Displays the local date and time
-            document.getElementById("dateTime").innerHTML = new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString();
+            document.getElementById("dateTime").innerHTML = " Date: " + new Date().toLocaleDateString() + " Time: " + new Date().toLocaleTimeString();
         }
         static hostDisplayStatus() {
             // Displays the OS status
-            document.getElementById("status").innerHTML = status;
+            document.getElementById("status").innerHTML = "Status: drakeOS 0.03";
         }
     }
     TSOS.Control = Control;

@@ -26,10 +26,15 @@ var TSOS;
             // Parse the params.  TODO: Check that the params are valid and osTrapError if not.
             var keyCode = params[0];
             var isShifted = params[1];
-            _Kernel.krnTrace("Key code:" + keyCode + " shifted:" + isShifted);
+            var isControlled = params[2];
+            var isCapsLocked = params[3];
+            _Kernel.krnTrace("Key code:" + keyCode + " shifted:" + isShifted + " caps lock: " + isCapsLocked + " ctrl: " + isControlled);
             var chr = "";
             // Check to see if we even want to deal with the key that was pressed.
-            if ((keyCode >= 65) && (keyCode <= 90)) { // letter
+            if (isControlled && (keyCode == 67)) {
+                _KernelInputQueue.enqueue("ctrl-c");
+            }
+            else if ((keyCode >= 65) && (keyCode <= 90)) { // letter
                 if (isShifted === true) {
                     chr = String.fromCharCode(keyCode); // Uppercase A-Z
                 }
@@ -44,6 +49,16 @@ var TSOS;
                 (keyCode == 13)) { // enter
                 chr = String.fromCharCode(keyCode);
                 _KernelInputQueue.enqueue(chr);
+            }
+            else if ((keyCode === 38) || (keyCode === 40)) { //up and down arrows
+                switch (keyCode) {
+                    case 38:
+                        _KernelInputQueue.enqueue("upArrow");
+                        break;
+                    case 40:
+                        _KernelInputQueue.enqueue("downArrow");
+                        break;
+                }
             }
         }
     }

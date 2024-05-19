@@ -185,7 +185,7 @@ var TSOS;
             _StdOut.putText(date + " " + time);
         }
         shellWhereAmI(args) {
-            _StdOut.putText("I think you are in Tokyo?");
+            _StdOut.putText("I think you're in Tokyo?");
             _StdOut.putText(" No that cant be right...");
         }
         shellCowSay(args) {
