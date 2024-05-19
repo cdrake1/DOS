@@ -115,12 +115,12 @@ module TSOS {
 
         public static hostDisplayCurrentDateTime(): void{
             // Displays the local date and time
-            document.getElementById("dateTime").innerHTML = new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString();
+            document.getElementById("dateTime").innerHTML = "Date: " + new Date().toLocaleDateString() + " Time: " + new Date().toLocaleTimeString();
         }
 
         public static hostDisplayStatus(): void{
             // Displays the OS status
-            document.getElementById("status").innerHTML = status;
+            document.getElementById("status").innerHTML = "Status: drakeOS 0.03";
         }
     }
 }
