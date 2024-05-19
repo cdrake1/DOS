@@ -38,6 +38,11 @@
 <body onload="onDocumentLoad()">
 
 <div id="divMain" style="width:100%;">
+   
+   <div id="hostDisplay" style="margin:4px">
+      <p id="dateTime"> Date: Time: </p>
+      <p id="status">Status: drakeOS 0.03 </p>
+   </div>
 
    <div id="divButtonBar" style="margin:4px;">
       <input type="button"
@@ -65,17 +70,6 @@
              value="Reset"
              tabindex="2"
              onclick="TSOS.Control.hostBtnReset_click(this);">
-   </div>
-
-   <div id="hostDisplay" style="margin:4px">
-      <div id="datetime">
-
-      </div>
-
-      <div id="status">
-         
-      </div>
-
    </div>
 
    <div id="divConsole" style="margin:4px; width:500px; height:500px; float:left;">
